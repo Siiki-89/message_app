@@ -1,19 +1,10 @@
-### Fazer login no programa - alexandre
+### Fazer login no programa - usuario
 POST http://localhost:8080/login
 Content-Type: application/json
 
 {
   "login": "usuario",
   "senha": "senha"
-}
-
-### Fazer login no programa - alejandra
-POST http://localhost:8080/login
-Content-Type: application/json
-
-{
-  "login": "alejandra",
-  "senha": "alXa"
 }
 
 ### Fazer logout no programa
