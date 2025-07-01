@@ -1,0 +1,71 @@
+### Fazer login no programa - alexandre
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "login": "usuario",
+  "senha": "senha"
+}
+
+### Fazer login no programa - alejandra
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "login": "alejandra",
+  "senha": "alXa"
+}
+
+### Fazer logout no programa
+POST http://localhost:8080/logout
+Authorization: 08c27258-fbfc-4d1a-90ee-728fbc802a76
+
+### Listar salas
+GET http://localhost:8080/salas
+Authorization: 864b9197-28dd-4afb-b751-ab9e3c00a4b6
+
+### Criar sala
+POST http://localhost:8080/sala
+Content-Type: application/json
+Authorization: 864b9197-28dd-4afb-b751-ab9e3c00a4b6
+
+{
+  "nome": "Exemplo",
+  "vagas": 10
+}
+
+### Editar sala
+POST http://localhost:8080/sala
+Content-Type: application/json
+Authorization: cc84767f-1475-453b-b190-312e09b43908
+
+{
+  "codigo": "1acc0bb8-056b-4caf-94de-c4cb12578b82",
+  "nome": "Exemplo - ALT",
+  "vagas": 4
+}
+
+### Entrar em sala
+POST http://localhost:8080/sala/entrar/ac57a4eb-bcdf-4b2d-b581-2a1f483d770e
+Authorization: 8f79bd23-b51f-4718-87de-b79b561f68b7
+
+### Sair da sala
+POST http://localhost:8080/sala/sair/ac57a4eb-bcdf-4b2d-b581-2a1f483d770e
+Authorization: 8f79bd23-b51f-4718-87de-b79b561f68b7
+
+### Carregar dados da sala
+GET http://localhost:8080/sala/33ebce4e-559e-4a11-9917-2b19c86f7ee2
+Authorization: ad31302f-7d3c-4e7d-9361-85242a612779
+
+### Apagar uma sala
+DELETE http://localhost:8080/sala/19923fc0-1f1e-41e2-9b47-586c22adcddd
+Authorization: 864b9197-28dd-4afb-b751-ab9e3c00a4b6
+
+### Enviar mensagem para sala
+POST http://localhost:8080/sala/mensagem/33ebce4e-559e-4a11-9917-2b19c86f7ee2
+Authorization: ad31302f-7d3c-4e7d-9361-85242a612779
+Content-Type: application/json
+
+{
+  "mensagem": "Olá mundo"
+}
